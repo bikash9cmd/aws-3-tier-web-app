@@ -1,0 +1,34 @@
+# ─────────────────────────────────────────────────────────────
+# COPY THIS FILE TO terraform.tfvars AND FILL IN YOUR VALUES
+# terraform.tfvars is gitignored to protect secrets
+# ─────────────────────────────────────────────────────────────
+
+aws_region   = "us-east-1"
+project_name = "3tier-app"
+environment  = "prod"
+
+# Networking
+vpc_cidr            = "10.0.0.0/16"
+public_subnet_cidrs = ["10.0.1.0/24", "10.0.2.0/24"]
+app_subnet_cidrs    = ["10.0.10.0/24", "10.0.11.0/24"]
+db_subnet_cidrs     = ["10.0.20.0/24", "10.0.21.0/24"]
+
+# EC2 – verify the latest Amazon Linux 2023 AMI for us-east-1
+ami_id        = "ami-0ae8f15ae66fe8cda"
+instance_type = "t3.micro"
+
+# ASG
+asg_min_size         = 2
+asg_max_size         = 6
+asg_desired_capacity = 2
+
+# RDS
+db_name              = "appdb"
+db_username          = "admin"
+db_password          = "CHANGE_ME_USE_STRONG_PASSWORD"   # ← CHANGE THIS
+db_instance_class    = "db.t3.micro"
+db_allocated_storage = 20
+
+# DNS & TLS (optional – leave empty to skip)
+domain_name     = ""   # e.g. "bikash.com"
+certificate_arn = ""   # e.g. "arn:aws:acm:us-east-1:123456789:certificate/abc"

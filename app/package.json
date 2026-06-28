@@ -1,0 +1,20 @@
+{
+  "name": "3-tier-aws-app",
+  "version": "1.0.0",
+  "description": "3-Tier Web Application – Application Tier (Node.js + Express)",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql2": "^3.6.0",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "author": "Bikash Kushwaha",
+  "license": "MIT"
+}
