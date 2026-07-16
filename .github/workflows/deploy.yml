@@ -88,6 +88,7 @@ jobs:
 
       - name: Terraform Init
         working-directory: ${{ env.TF_DIR }}
+        #in the  directory
         run: terraform init
 
       - name: Terraform Apply
