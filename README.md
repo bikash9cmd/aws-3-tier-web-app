@@ -181,3 +181,7 @@ terraform apply tfplan
 BSc Computer Science with AI – Birmingham City University  
 AWS Academy Graduate – Cloud Architecting  
 📧 kushwahabikash9580@gmail.com
+
+## License
+
+Released under the [MIT License](LICENSE).
